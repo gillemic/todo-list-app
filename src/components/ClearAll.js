@@ -7,7 +7,7 @@ export class ClearAll extends Component {
             justifyContent: 'center',
             display: 'flex',
             alignItems: 'center',
-            padding: '20px'
+            padding: '20px',
         }
     }
 

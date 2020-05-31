@@ -22,7 +22,9 @@ a {
 
 .add-text {
     margin: auto;
-    background-color: #aaa;
+    background-color: #fff;
     font-size: 20px; 
+    font-weight: 'bold';
     text-align: center;
+    border: 1px solid black;
 }
