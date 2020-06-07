@@ -4,6 +4,7 @@ export default function Header() {
     return (
         <header style={headerStyle}>
             <h1>To-do List</h1>
+            <p style={{fontSize: '14px'}}>By: Michael Gillett</p>
         </header>
     )
 }
