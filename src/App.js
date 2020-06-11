@@ -5,7 +5,6 @@ import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
   Redirect
 } from 'react-router-dom';
 
@@ -13,6 +12,7 @@ import {
 import MainPage from './pages';
 import NotFoundPage from './pages/404';
 import TodoList from './pages/todoList';
+import ResumePage from './pages/resume';
 
 class App extends Component {
   render() {
@@ -22,6 +22,7 @@ class App extends Component {
           <Route exact path="/" component={MainPage} />
           <Route exact path="/todo" component={TodoList} />
           <Route exact path="/404" component={NotFoundPage} />
+          <Route exact path="/resume" component={ResumePage} />
           <Redirect to="/404" />
         </Switch>
       </Router>

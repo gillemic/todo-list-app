@@ -19,10 +19,17 @@ export class ClearAll extends Component {
     render() {
         return (
             <div style={this.getStyle()}>
-                <button onClick={this.onSubmit}>Clear Completed Tasks</button>
+                <button style={buttonStyle} onClick={this.onSubmit}>Clear Completed Tasks</button>
             </div>
         )
     }
+}
+
+const buttonStyle = {
+    padding: "5px",
+    fontSize: "16px",
+    backgroundColor: "#f30",
+    fontWeight: "bold"
 }
 
 export default ClearAll;

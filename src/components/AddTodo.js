@@ -36,7 +36,7 @@ export class AddTodo extends Component {
                     type="submit"
                     value="Submit"
                     className="btn"
-                    style={{flex: '1', marginTop: '5px', marginLeft: '5px'}}
+                    style={{flex: '1', marginTop: '5px', marginLeft: '5px', fontWeight: 'bold'}}
                 />
             </form>
         )

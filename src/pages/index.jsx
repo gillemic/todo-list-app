@@ -9,10 +9,9 @@ const headerStyle = {
     margin: "auto",
     width: "auto",
     textAlign: "center",
-    backgroundColor: "#98f",
+    backgroundColor: "#666",
     border: "solid",
     marginBottom: "10px",
-    // display: "flex",
     height: "page-height"
 }
 
@@ -31,7 +30,7 @@ const MainPage = () => {
         <div style={mainPageStyle}>
             <div style={headerStyle}>
                 <h1>Welcome</h1>
-                <small>By: Michael Gillett</small>
+                <small>This website was made by Michael Gillett using React</small>
             </div>
             <p style={{textAlign: "center", marginBottom: "10px", fontSize: "18px"}}>This is a website for documenting and showcasing my projects in an accesible manor</p>
             <div style={mainPageBody}>
