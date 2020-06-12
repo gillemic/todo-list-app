@@ -1,8 +1,14 @@
 import React from 'react';
 
+const NotFoundStyle = {
+    textAlign: "center",
+    backgroundColor: "#fff",
+    fontSize: "24px"
+}
+
 const NotFoundPage = () => {
     return (
-        <div>
+        <div style={NotFoundStyle}>
             <h1>Page not found</h1>
         </div>
     );

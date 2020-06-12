@@ -3,10 +3,12 @@ import './App.css';
 
 import {
   BrowserRouter as Router,
+  HashRouter,
   Route,
   Switch,
   Redirect
 } from 'react-router-dom';
+
 
 //Pages
 import MainPage from './pages';
@@ -17,7 +19,7 @@ import ResumePage from './pages/resume';
 class App extends Component {
   render() {
     return (
-      <Router>
+      <HashRouter>
         <Switch>
           <Route exact path="/" component={MainPage} />
           <Route exact path="/todo" component={TodoList} />
@@ -25,7 +27,7 @@ class App extends Component {
           <Route exact path="/resume" component={ResumePage} />
           <Redirect to="/404" />
         </Switch>
-      </Router>
+      </HashRouter>
     );
   }
 }
