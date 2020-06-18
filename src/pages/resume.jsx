@@ -1,6 +1,8 @@
 import React from 'react';
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
 import { PDFViewer } from '@react-pdf/renderer';
+import NavBar from '../components/layout/Navbar';
+import Header from '../components/layout/Header';
 
 // Create styles
 const styles = StyleSheet.create({
@@ -30,9 +32,13 @@ const MyDocument = () => (
 );
 
 const ResumePage = () => (
-    <PDFViewer>
-        <MyDocument />
-    </PDFViewer>
+    <div>
+      <Header />
+      <NavBar />
+      <PDFViewer>
+          <MyDocument />
+      </PDFViewer>
+    </div>
 );
 
 export default ResumePage;

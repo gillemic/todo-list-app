@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Header from '../components/layout/Header';
-import Todos from '../components/Todos';
-import AddTodo from '../components/AddTodo';
-import ClearAll from '../components/ClearAll'
+import Todos from '../components/todo/Todos';
+import AddTodo from '../components/todo/AddTodo';
+import ClearAll from '../components/todo/ClearAll'
 import uuid from 'uuid';
 
 import '../App.css';
+import NavBar from '../components/layout/Navbar';
 
 class TodoList extends Component {
   state = {
@@ -42,18 +43,35 @@ class TodoList extends Component {
     this.setState({ todos: [...this.state.todos.filter(todo => todo.completed === false)] });
   }
 
+  
+
   render() {
     return (
-      <div className="App">
+      <div>
         <Header />
-        <p className='add-text'>Enter a task and press 'Submit' to add it to your list</p>
-        <AddTodo addTodo={this.addTodo}/>
-        <Todos todos={this.state.todos} markComplete={this.markComplete}
-        deleteTodo={this.deleteTodo} />
-        <ClearAll clearAll={this.clearAll} todos={this.state.todos}/>
+        <NavBar />
+        <div className="App">
+          <header style={todoHeader}>
+              <h1>Todo List</h1>
+          </header>
+          <p className='add-text'>Enter a task and press 'Submit' to add it to your list</p>
+          <AddTodo addTodo={this.addTodo}/>
+          <Todos todos={this.state.todos} markComplete={this.markComplete}
+          deleteTodo={this.deleteTodo} />
+          <ClearAll clearAll={this.clearAll} todos={this.state.todos}/>
+        </div>
       </div>
     );
   }
+}
+
+const todoHeader = {
+  marginTop: "10px",
+  marginBottom: "10px",
+  width: "auto",
+  textAlign: "center",
+  backgroundColor: "#394",
+  border: "solid",
 }
 
 export default TodoList;
