@@ -23,7 +23,10 @@ class NavBar extends Component {
             <h1>Home</h1>
           </a>
           <a href="#/todo" style={NavItemStyle}>
-              <h1>TodoList</h1>
+            <h1>TodoList</h1>
+          </a>
+          <a href="#/resume" style={NavItemStyle}>
+            <h1>Resume</h1>
           </a>
         </nav>
       </React.Fragment>

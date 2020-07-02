@@ -1,44 +1,32 @@
 import React from 'react';
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
+import {StyleSheet, ReactPDF } from 'react-pdf';
 import { PDFViewer } from '@react-pdf/renderer';
 import NavBar from '../components/layout/Navbar';
 import Header from '../components/layout/Header';
+import { Component } from 'react';
 
 // Create styles
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: 'row',
-    backgroundColor: '#E4E4E4'
-  },
-  section: {
-    margin: 10,
-    padding: 10,
-    flexGrow: 1
-  }
-});
 
 // Create Document Component
-const MyDocument = () => (
-  <Document file='MichaelGillett_Resume.pdf'>
-    <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Text>Section #1</Text>
-      </View>
-      <View style={styles.section}>
-        <Text>Section #2</Text>
-      </View>
-    </Page>
-  </Document>
-);
+const pdfStyle = {
+  width: "80%",
+  height: "80%",
+  minHeight: "700px",
+  display: "flex",
+  margin: "auto"
+}
 
-const ResumePage = () => (
-    <div>
-      <Header />
-      <NavBar />
-      <PDFViewer>
-          <MyDocument />
-      </PDFViewer>
-    </div>
-);
+class ResumePage extends Component {
+  render() {
+    return (
+      <div>
+        <Header />
+        <NavBar />
+        <iframe style={pdfStyle} title="resume" src="MichaelGillett_Resume.pdf"/>
+      </div>
+    );
+  }
+}
+
 
 export default ResumePage;
